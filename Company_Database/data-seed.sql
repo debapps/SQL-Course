@@ -1,0 +1,138 @@
+-- Create database
+CREATE DATABASE COMPANY;
+
+-- Use the database.
+USE COMPANY;
+
+-- Create the employee Table.
+CREATE TABLE employee (
+  emp_id VARCHAR(10) PRIMARY KEY,
+  emp_name VARCHAR(30) NOT NULL,
+  dept_name VARCHAR(30) NOT NULL,
+  salary DECIMAL(10,2) NOT NULL
+);
+
+-- Insert into employee table.
+INSERT INTO employee (emp_id, emp_name, dept_name, salary)
+VALUES
+("EMP001","John Doe","Admin",100000.00),
+("EMP002","Jane Smith","IT",85000.75),
+("EMP003","Michael Lee","Finance",92456.98),
+("EMP004","Amanda Johnson","HR",78921.33),
+("EMP005","David Williams","Operations",65487.12),
+("EMP006","Olivia Jones","Admin",82145.60),
+("EMP007","Noah Brown","IT",98732.41),
+("EMP008","Sophia Garcia","Finance",89563.09),
+("EMP009","William Miller","HR",72310.54),
+("EMP010","Emily Davis","Operations",59874.27),
+("EMP011","James Garcia","Admin",112500.78),
+("EMP012","Isabella Hernandez","IT",78421.00),
+("EMP013","Charles Young","Finance",105236.89),
+("EMP014","Ashley Moore","HR",81742.91),
+("EMP015","Daniel Johnson","Operations",68315.42),
+("EMP016","Sophia Allen","Admin",95123.77),
+("EMP017","Christopher Hernandez","IT",82098.33),
+("EMP018","Elizabeth Walker","Finance",75421.65),
+("EMP019","Matthew Garcia","HR",92874.10),
+("EMP020","Jennifer Lopez","Operations",53147.98),
+("EMP021","Robert Brown","Admin",120000.00),
+("EMP022","Margaret Miller","IT",87345.21),
+("EMP023","Joseph Hernandez","Finance",110000.00),
+("EMP024","Catherine Jones","HR",79832.55),
+("EMP025","Andrew Davis","Operations",62541.89),
+("EMP026","Sarah Thomas","Admin",108754.32),
+("EMP027","Daniel Garcia","IT",91234.78),
+("EMP028","Evelyn Moore","Finance",84567.11),
+("EMP029","Richard Garcia","HR",87321.45),
+("EMP030","Samantha Lopez","Operations",70198.56);
+
+select * from employee;
+
+-- Create department table.
+CREATE TABLE department (
+  dept_id VARCHAR(10) PRIMARY KEY,
+  dept_name VARCHAR(30) NOT NULL,
+  dept_loc VARCHAR(30) NOT NULL
+);
+
+-- Populate department table data.
+INSERT INTO department (dept_id, dept_name, dept_loc)
+VALUES
+  ('D001', 'Admin', 'Delhi'),
+  ('D002', 'Finance', 'Mumbai'),
+  ('D003', 'IT', 'Kolkata'),
+  ('D004', 'Operations', 'Bhubaneswar'),
+  ('D005', 'HR', 'Pune'),
+  ('D006', 'Research & Development', 'Chennai'),
+  ('D007', 'Marketing', 'Kochi'),
+  ('D008', 'Sales', 'Bangalore')
+;
+select * from department;
+
+-- Sales Table
+CREATE TABLE sales (
+  sales_id INT PRIMARY KEY AUTO_INCREMENT,
+  sales_date DATE,
+  product_name VARCHAR(50) NOT NULL,
+  store_id VARCHAR(10) NOT NULL,
+  store_name VARCHAR(50) NOT NULL,
+  quantity INT NOT NULL,
+  price_amount DECIMAL(10,2) NOT NULL
+);
+
+INSERT INTO sales (sales_id, sales_date, product_name, store_id, store_name, quantity, price_amount)
+VALUES
+(1,'2023-05-16','Trousers','S002','Store S002',5,21.57),
+(2,'2023-07-28','Jeans','S002','Store S002',5,55.03),
+(3,'2024-03-26','Shirt','S004','Store S004',3,88.19),
+(4,'2023-05-07','Dress','S001','Store S001',2,63.21),
+(5,'2023-05-23','Shirt','S004','Store S004',2,12.94),
+(6,'2023-10-23','Trousers','S004','Store S004',4,98.07),
+(7,'2023-10-09','Shirt','S005','Store S005',2,47.67),
+(8,'2023-05-14','Jeans','S003','Store S003',5,61.99),
+(9,'2024-02-12','Bag','S004','Store S004',5,62.54),
+(10,'2023-04-21','Trousers','S002','Store S002',3,67.2),
+(11,'2023-11-22','Trousers','S005','Store S005',1,60.45),
+(12,'2023-10-20','Dress','S005','Store S005',2,11.82),
+(13,'2023-08-22','Shoes','S001','Store S001',4,82.49),
+(14,'2024-02-29','Shoes','S005','Store S005',4,55.32),
+(15,'2023-12-19','Hat','S001','Store S001',2,93.92),
+(16,'2024-03-03','Trousers','S003','Store S003',2,88.5),
+(17,'2023-12-07','Dress','S002','Store S002',3,88.2),
+(18,'2023-12-07','Jeans','S001','Store S001',4,20.15),
+(19,'2024-01-10','Shirt','S003','Store S003',3,51.37),
+(20,'2023-12-18','Trousers','S005','Store S005',3,97.33),
+(21,'2023-12-23','Watch','S002','Store S002',4,23.0),
+(22,'2023-06-22','Jeans','S001','Store S001',5,59.52),
+(23,'2023-11-03','Hat','S001','Store S001',3,70.55),
+(24,'2023-12-01','Bag','S004','Store S004',2,59.83),
+(25,'2023-07-03','Trousers','S003','Store S003',1,71.72),
+(26,'2024-03-15','Trousers','S003','Store S003',2,95.62),
+(27,'2024-03-27','Bag','S005','Store S005',5,40.93),
+(28,'2023-10-14','Shoes','S003','Store S003',4,24.74),
+(29,'2023-12-31','Hat','S001','Store S001',2,51.7),
+(30,'2023-12-16','Hat','S002','Store S002',3,11.9),
+(31,'2023-09-10','Dress','S003','Store S003',1,34.31),
+(32,'2023-10-10','Dress','S001','Store S001',5,22.36),
+(33,'2023-10-02','Trousers','S004','Store S004',4,87.8),
+(34,'2023-09-08','Watch','S002','Store S002',3,17.97),
+(35,'2023-06-07','Jeans','S003','Store S003',3,86.46),
+(36,'2023-11-29','Dress','S003','Store S003',2,90.98),
+(37,'2023-10-11','Shirt','S005','Store S005',4,28.55),
+(38,'2023-05-19','Dress','S002','Store S002',2,68.4),
+(39,'2023-08-19','Trousers','S003','Store S003',1,55.73),
+(40,'2023-05-23','Jeans','S005','Store S005',3,82.4),
+(41,'2024-02-13','Shoes','S003','Store S003',2,39.25),
+(42,'2023-12-16','Jeans','S003','Store S003',1,61.19),
+(43,'2023-12-27','Shirt','S004','Store S004',2,59.2),
+(44,'2023-05-29','Shoes','S001','Store S001',5,93.87),
+(45,'2023-05-04','Shoes','S002','Store S002',3,69.99),
+(46,'2023-09-03','Watch','S004','Store S004',2,58.8),
+(47,'2023-07-28','Trousers','S003','Store S003',2,27.94),
+(48,'2023-12-22','Shirt','S004','Store S004',5,39.65),
+(49,'2023-05-21','Jeans','S003','Store S003',1,99.16),
+(50,'2023-12-28','Shoes','S001','Store S001',2,16.7)
+;
+
+select * from sales 
+order by store_id;
