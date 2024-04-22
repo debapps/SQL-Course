@@ -136,3 +136,50 @@ VALUES
 
 select * from sales 
 order by store_id;
+
+CREATE TABLE product (
+  product_id VARCHAR(10) PRIMARY KEY,
+  product_name VARCHAR(50) NOT NULL,
+  product_category VARCHAR(20) NOT NULL,
+  brand VARCHAR(20) NOT NULL,
+  price DECIMAL(10,2) NOT NULL
+);
+
+INSERT INTO product (product_id, product_name, product_category, brand, price)
+VALUES
+  ('P001', 'iPhone 14 Pro Max', 'Phone', 'Apple', 139900.00),
+  ('P002', 'Galaxy S23 Ultra', 'Phone', 'Samsung', 119999.00),
+  ('P003', 'Reno 8 Pro', 'Phone', 'Oppo', 45990.00),
+  ('P004', 'V25 Pro', 'Phone', 'Vivo', 35990.00),
+  ('P005', 'Narzo 50A Prime', 'Phone', 'Realme', 11999.00),
+  ('P006', 'XPS 13', 'Laptop', 'Dell', 79990.00),
+  ('P007', 'Galaxy Book 2 Pro', 'Laptop', 'Samsung', 98990.00),
+  ('P008', 'IdeaPad Slim 3', 'Laptop', 'Lenovo', 25990.00),
+  ('P009', 'AirPods Pro', 'Headphone', 'Apple', 24900.00),
+  ('P010', 'Galaxy Buds Pro', 'Headphone', 'Samsung', 17990.00),
+  ('P011', 'Sony WH-1000XM5', 'Headphone', 'Sony', 32990.00),
+  ('P012', 'OnePlus Buds Z2', 'Earphone', 'OnePlus', 1999.00),
+  ('P013', 'Samsung Galaxy Buds Live', 'Earphone', 'Samsung', 6990.00),
+  ('P014', 'Apple Watch Series 8', 'Smartwatch', 'Apple', 41900.00),
+  ('P015', 'Galaxy Watch 5 Pro', 'Smartwatch', 'Samsung', 28990.00),
+  ('P016', 'Amazfit Bip 3 Pro', 'Smartwatch', 'Amazfit', 7999.00),
+  ('P017', 'iPad Air M1', 'Tablet', 'Apple', 51900.00),
+  ('P018', 'Galaxy Tab S8 Ultra', 'Tablet', 'Samsung', 109990.00),
+  ('P019', 'Realme Pad Mini', 'Tablet', 'Realme', 8999.00),
+  ('P020','Pixel 7 Pro','Phone','Google',84999.00),
+  ('P021','Redmi Note 12 Pro+ 5G','Phone','Xiaomi',29999.00),
+  ('P022','OnePlus 11 Pro','Phone','OnePlus',64999.00), 
+  ('P023','iPhone 13 Mini','Phone','Apple',69900.00),
+  ('P024','Galaxy A54 5G','Phone','Samsung',34999.00),
+  ('P025','iQOO Neo 7','Phone','Vivo',39990.00),
+  ('P026','Narzo 50 Pro 5G','Phone','Realme',15999.00),
+  ('P027','Macbook Air (M2 chip)','Laptop','Apple',129900.00),
+  ('P028','IdeaPad Gaming 3','Laptop','Lenovo',74990.00),
+  ('P029','VivoBook S15','Laptop','ASUS',49990.00),
+  ('P030','Xperia 1 IV','Laptop','Sony',189990.00),
+  ('P031','Inspiron 15 (Latest Model)','Laptop','Dell',64990.00),
+  ('P032','Chromebook Spin 713','Laptop','Acer',32990.00),
+  ('P033','Mi Notebook Ultra','Laptop','Xiaomi',79990.00);
+  
+  select * from product;
+
